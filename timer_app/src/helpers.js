@@ -49,11 +49,10 @@ const tmp = function() {
   }
 
   return {
-    millisecondsToHuman,
-    newTimer,
+    'millisecondsToHuman' : millisecondsToHuman,
+    'newTimer': newTimer,
     findById,
     renderElapsedString,
   };
 }();
-debugger;
 export default tmp;
