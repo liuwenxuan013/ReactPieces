@@ -3,12 +3,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
-
 const app = express();
 
 const DATA_FILE = path.join(__dirname, 'data.json');
 
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 3001));
 
 app.use('/', express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
@@ -45,7 +44,8 @@ app.post('/api/timers', (req, res) => {
     });
   });
 });
-
+//Accepts a JSON body with title, project, and id attributes.
+// Will insert a new timer object into its store.
 app.post('/api/timers/start', (req, res) => {
   fs.readFile(DATA_FILE, (err, data) => {
     const timers = JSON.parse(data);

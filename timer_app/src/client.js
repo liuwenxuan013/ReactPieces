@@ -1,14 +1,15 @@
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
-window.client = (function () {
+const client = function () {
   function getTimers(success) {
-    return fetch('/api/timers', {
+    return fetch('http://localhost:3001/api/timers', {
       headers: {
         Accept: 'application/json',
       },
     }).then(checkStatus)
       .then(parseJSON)
-      .then(success);
+      .then(success)
+        .catch(error=>console.log(error.message));
   }
 
   function createTimer(data) {
@@ -19,7 +20,8 @@ window.client = (function () {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
       },
-    }).then(checkStatus);
+    }).then(checkStatus)
+        .catch(error=>console.log(error.message));
   }
 
   function updateTimer(data) {
@@ -30,7 +32,8 @@ window.client = (function () {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
       },
-    }).then(checkStatus);
+    }).then(checkStatus)
+        .catch(error=>console.log(error.message));
   }
 
   function deleteTimer(data) {
@@ -41,7 +44,8 @@ window.client = (function () {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
       },
-    }).then(checkStatus);
+    }).then(checkStatus)
+        .catch(error=>console.log(error.message));
   }
 
   function startTimer(data) {
@@ -52,7 +56,8 @@ window.client = (function () {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
       },
-    }).then(checkStatus);
+    }).then(checkStatus)
+        .catch(error=>console.log(error.message));
   }
 
   function stopTimer(data) {
@@ -63,7 +68,8 @@ window.client = (function () {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
       },
-    }).then(checkStatus);
+    }).then(checkStatus)
+    .catch(error=>console.log(error.message));
   }
 
   function checkStatus(response) {
@@ -90,4 +96,5 @@ window.client = (function () {
     stopTimer,
     deleteTimer,
   };
-}());
+}();
+export default client;
