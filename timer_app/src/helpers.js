@@ -1,5 +1,5 @@
-window.helpers = (
-    function () {
+
+const tmp = function() {
   function newTimer(attrs = {}) {
     const timer = {
       title: attrs.title || 'Timer',
@@ -54,4 +54,6 @@ window.helpers = (
     findById,
     renderElapsedString,
   };
-}());
+}();
+debugger;
+export default tmp;
