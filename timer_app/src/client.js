@@ -1,6 +1,8 @@
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
+
 const client = function () {
+
   function getTimers(success) {
     return fetch('http://localhost:3001/api/timers', {
       headers: {

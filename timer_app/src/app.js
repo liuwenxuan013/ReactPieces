@@ -7,11 +7,13 @@ import  ReactDOM from "react-dom";
 import helpers from "./helpers";
 import client from "./client";
 
+
 export class TimersDashboard extends React.Component {
   constructor(props) {
     super(props);
+    // const initTimer=client.initTimers();
     this.state = {
-      timers: []
+      timers:[],
     };
   }
   componentDidMount() {
