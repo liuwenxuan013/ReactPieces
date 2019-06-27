@@ -1,10 +1,10 @@
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
-
+const API_URI = "http://localhost:3001";
 const client = function () {
 
   function getTimers(success) {
-    return fetch('http://localhost:3001/api/timers', {
+    return fetch(API_URI + '/api/timers', {
       headers: {
         Accept: 'application/json',
       },
@@ -15,7 +15,7 @@ const client = function () {
   }
 
   function createTimer(data) {
-    return fetch('/api/timers', {
+    return fetch(API_URI+ '/api/timers', {
       method: 'post',
       body: JSON.stringify(data),
       headers: {
@@ -27,7 +27,7 @@ const client = function () {
   }
 
   function updateTimer(data) {
-    return fetch('/api/timers', {
+    return fetch(API_URI+ '/api/timers', {
       method: 'put',
       body: JSON.stringify(data),
       headers: {
@@ -39,7 +39,7 @@ const client = function () {
   }
 
   function deleteTimer(data) {
-    return fetch('/api/timers', {
+    return fetch(API_URI+ '/api/timers', {
       method: 'delete',
       body: JSON.stringify(data),
       headers: {
@@ -51,7 +51,7 @@ const client = function () {
   }
 
   function startTimer(data) {
-    return fetch('/api/timers/start', {
+    return fetch(API_URI+ '/api/timers/start', {
       method: 'post',
       body: JSON.stringify(data),
       headers: {
@@ -63,7 +63,7 @@ const client = function () {
   }
 
   function stopTimer(data) {
-    return fetch('/api/timers/stop', {
+    return fetch(API_URI + '/api/timers/stop', {
       method: 'post',
       body: JSON.stringify(data),
       headers: {

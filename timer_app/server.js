@@ -4,7 +4,8 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
 const app = express();
-
+const cors = require('cors');
+app.use(cors());
 const DATA_FILE = path.join(__dirname, 'data.json');
 
 app.set('port', (process.env.PORT || 3001));
@@ -14,6 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use((req, res, next) => {
+  console.log("this is middleware");
   res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
   res.setHeader('Pragma', 'no-cache');
   res.setHeader('Expires', '0');
@@ -23,7 +25,7 @@ app.use((req, res, next) => {
 app.get('/api/timers', (req, res) => {
   fs.readFile(DATA_FILE, (err, data) => {
     res.setHeader('Cache-Control', 'no-cache');
-    res.json(JSON.parse(data));
+    res.json(JSON.parse(data));//parse->trans
   });
 });
 

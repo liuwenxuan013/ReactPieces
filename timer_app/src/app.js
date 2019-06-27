@@ -17,7 +17,8 @@ export class TimersDashboard extends React.Component {
     };
   }
   componentDidMount() {
-    client.getTimers(timers => this.setState({
+    client.getTimers(timers =>
+        this.setState({
       timers
     }));
   }
