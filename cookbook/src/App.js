@@ -1,6 +1,7 @@
-import React,{ Component }  from 'react';
-import logo from './logo.svg';
-import Switch from  "./components/Switch";
+import React, { Component }  from 'react';
+
+import ClassComponents from './components/Component/Components'
+import CreateClassApp from './components/Component/CreateClassApp'
 
 
 import './App.css';
@@ -10,11 +11,12 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+
           <h1 className="App-title">Hello~</h1>
         </header>
        <body>
-       < Switch />
+       <ClassComponents> </ClassComponents>
+       <CreateClassApp></CreateClassApp>
 
 
        </body>
