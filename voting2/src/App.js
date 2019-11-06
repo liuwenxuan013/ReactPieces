@@ -1,8 +1,7 @@
  import React from 'react';
  import './App.css';
  import Seed from './seed';
- import * as ReactDOM from "react-dom";
-import {Component} from 'react';
+ import {Component} from 'react';
 class Product extends React.Component{
   // constructor(props){
   //   super(props);
@@ -106,8 +105,8 @@ render(){
   }
 }
 export default App;
-ReactDOM.render(
-    <App />,
-    document.getElementById('root')
-);
+// ReactDOM.render(
+//     <App />,
+//     document.getElementById('root')
+// );
 
