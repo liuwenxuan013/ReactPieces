@@ -1,7 +1,7 @@
 /*
  An example of how ES5 modularity was reached - creation of a static pure interface (module).
  */
-window.client = (function () {
+const client =function() {
   function getTimers(success) {
     return fetch('/api/timers', {
       headers: {
@@ -84,4 +84,5 @@ window.client = (function () {
     stopTimer,
     deleteTimer,
   }; //export of public methods into window.client obj.
-}());
+}();
+export default client;
