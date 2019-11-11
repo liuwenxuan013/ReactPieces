@@ -7,12 +7,10 @@ import helpers from './helpers'
 import client from './client'
 
 class TimersDashboard extends React.Component{
-    constructor(props){
-        super(props);
-        this.state={
+    state={
             timers:[],
         };
-    }
+
     componentDidMount(): void {
         client.getTimers(timers=>
         this.setState({timers}
