@@ -24,7 +24,7 @@ import post3 from './blog-post.3.md';
 function Copyright() {
   return (
       <Typography variant="body2" color="textSecondary" align="center">
-        {'Copyright © '}
+        {'Copyright © Wenxuan'}
         <Link color="inherit" href="https://material-ui.com/">
 
         </Link>{' '}
@@ -139,6 +139,8 @@ const archives = [
 
 const social = ['GitHub', 'Twitter', 'Facebook','WeChat'];
 
+
+
 export default function App() {
   const classes = useStyles();
 
@@ -174,6 +176,7 @@ export default function App() {
                     variant="body2"
                     href="#"//TODO:react ROUTER
                     className={classes.toolbarLink}
+                    onClick={this.handleClick}
                 >
                   {section}
                 </Link>
