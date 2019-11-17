@@ -1,6 +1,6 @@
 import React from 'react';
 //import data from '../data.js';
-import Comment from './Comment';
+import Comment from '../Comments/Comment';
 import Avatar from "./Avatar";
 
 function Users (){

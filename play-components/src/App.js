@@ -1,25 +1,26 @@
 
 import React from 'react';
-import Users from './Components/Users';
+import Users from './Components/UserInfo/Users';
 import './App.css';
+//import TimeStamp from "./Components/TimeStamp/TimeStamp";
+
 
 
 class App extends React.Component{
 
-render(){
+    render(){
+        return (
+            <div>
 
-    return (
-        <div>
-            {/*<Comment name='Laura' />*/}
-            {/*<Comment name='Tim' />*/}
-            {/*<Comment name='Alisa' />*/}
-            <Users />
-        </div>
+                <Users />
 
 
-        );
+            </div>);
+    }
 
-}
+
+
+
 
 
 
