@@ -1,42 +1,101 @@
 import React from 'react';
-class Poster extends React.Component
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+
+const useStyles = makeStyles({
+    card: {
+        maxWidth: 345,
+    },
+    media: {
+        height: 140,
+    },
+});
+export default function Poster()
 {
 
-    render()
-    {
-        if (this.props.doesShow)
-            return (
+    const classes = useStyles();
 
 
-                <div>
-                    <p> {this.props.posterTitle}</p>
-                    {this.props.children}
-                    <img src={this.props.imgUrl} />
-
-
-                    <input
-                        type='text'
-                        value={this.props.content}
-                        onChange={this.props.changeContent}
-
-                    />
-                    <button
-                        onClick={this.props.clickPoster}
-                    >
-                        hide
-                </button>
-                </div>);
+    if (this.props.doesShow)
         return (
+
             <div>
 
-                <button
-                    onClick={this.props.clickPoster}
-                > + {this.props.posterTitle}</button>
-            </div>
-        );
+                <Card className={classes.card}>
+                    <CardActionArea>
+                        <CardMedia
+
+                            image={this.props.imgUrl}
+                            title={this.props.posterTitle}
+                        />
+
+
+                        {/* 
+                            <img src={this.props.imgUrl} alt='img' style={imgStyle} />
+                            <p>{this.props.posterTitle}</p> */}
 
 
 
-    }
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="h2">
+                                <p> {this.props.posterTitle}</p>
+                                {this.props.children}
+                            </Typography>
+                            <Typography variant="body2" color="textSecondary" component="p">
+
+                                <input
+                                    type='text'
+                                    value={this.props.content}
+                                    onChange={this.props.changeContent}
+
+                                />
+                            </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                        <Button size="small"
+                            color="primary"
+                            onClick={this.props.clickPoster}
+                        >
+                            Hide
+        </Button>
+                        <Button size="small" color="primary">
+                            Share
+        </Button>
+                    </CardActions>
+                </Card>
+            </div>);
+
+
+
+
+
+
+
+
+
+
+
+
+    return (
+        <div>
+            <Button size="small" color="primary"
+                onClick={this.props.clickPoster}>
+                + {this.props.posterTitle}
+            </Button>
+
+
+        </div>
+    );
+
+
+
+
 }
-export default Poster;
+

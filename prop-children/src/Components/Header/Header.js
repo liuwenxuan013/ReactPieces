@@ -1,12 +1,23 @@
 import React from 'react';
 
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+
 const Header = (props) =>
 {
     return (
-        <div>
-            <h1> {props.title} </h1>
-            {props.children}
-        </div>
+        <AppBar position="static">
+            <Toolbar>
+
+
+                <Typography variant="h6" >
+                    {props.title}{props.children}
+                </Typography>
+
+            </Toolbar>
+        </AppBar>
+
     );
 
 
