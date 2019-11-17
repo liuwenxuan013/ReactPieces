@@ -9,6 +9,8 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import posterStyle from './Poster.css';
 
+
+
 class Poster extends React.Component
 {
     render()
@@ -59,7 +61,9 @@ class Poster extends React.Component
                     </div>);
             return (
                 <div>
-                    <Button size="small" color="primary"
+                    <Button
+                        className={posterStyle.button}
+                        // size="small" color="primary"
                         onClick={this.props.clickPoster}>
                         + {this.props.posterTitle}
                     </Button>
