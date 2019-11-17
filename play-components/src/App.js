@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Welcome from './Components/Welcome';
+import Users from './Components/Users';
 import './App.css';
 
 
@@ -10,9 +10,10 @@ render(){
 
     return (
         <div>
-            <Welcome name='Laura' />
-            <Welcome name='Tim' />
-            <Welcome name='Alisa' />
+            {/*<Comment name='Laura' />*/}
+            {/*<Comment name='Tim' />*/}
+            {/*<Comment name='Alisa' />*/}
+            <Users />
         </div>
 
 
