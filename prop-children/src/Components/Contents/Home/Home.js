@@ -1,5 +1,6 @@
 import React from 'react';
 import Poster from './Posters/Poster';
+import Clock from '../Clock/Clock';
 class Home extends React.Component
 {
 
@@ -67,7 +68,8 @@ class Home extends React.Component
         {
 
             return (
-                <div>
+                <div key={poster.id}>
+
 
                     <Poster
                         key={poster.id}
@@ -81,6 +83,7 @@ class Home extends React.Component
                     >
                         <p> {poster.content}</p>
                     </Poster>
+
 
                 </div>
             )
