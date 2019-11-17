@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 class Clock extends React.Component{
     render(){
         return(
@@ -12,5 +12,9 @@ class Clock extends React.Component{
     }
 
 }
+
+
+
+
 export default Clock;
 
