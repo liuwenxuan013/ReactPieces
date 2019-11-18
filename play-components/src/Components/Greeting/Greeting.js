@@ -4,6 +4,7 @@ import Mailbox from "../Mailbox/Mailbox";
 import Notification from "../Notice/Notification";
 import CommentList from "../Comments/CommentList";
 import Terms from "../Terms/Terms";
+import Calculator from "../Calculator/Calculator";
 function UserGreeting(props){
     return <h3>Welcome Back</h3>;
 }
@@ -20,6 +21,7 @@ function Greeting(props){
             <Notification/>   <br/><br/><br/><hr/>
             <CommentList />    <br/><br/><br/><hr/>
             <Terms />   <br/><br/><br/><hr/>
+            <Calculator /> <br/><br/><br/><hr/>
 
 
             </div>;}
