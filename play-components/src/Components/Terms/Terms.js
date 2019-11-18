@@ -4,7 +4,7 @@ import React from "react";
 
 class Terms extends React.Component{
     state={
-        terms:'this is what you have to know before surfing on this website!!!!',
+        terms:'You can input after 5 mins',
     };
 
     render(){
@@ -14,7 +14,7 @@ class Terms extends React.Component{
         },5000);
         // let clearTimer=clearTimeout(timer);
             return <div>
-                    <textarea value={terms} />
+                    <textarea value={this.state.terms} />
                          <p hidden> {timer}</p>
                          {!terms?
                              <div>

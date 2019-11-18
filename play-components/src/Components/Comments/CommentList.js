@@ -6,7 +6,7 @@ class CommentList extends React.Component{
         newCommentTitle:'',
         newComment:'',
         newCommentSelect:'public',
-        newCommentInterest:[],
+        newCommentInterest:['music','movie'],
         isGoing:true,
         numberOfGuests:1,
 
@@ -24,7 +24,13 @@ class CommentList extends React.Component{
         this.setState({newCommentSelect:event.target.value});
     };
     multipleSelectHandler=(event)=>{
-        this.setState({newCommentInterest:event.target.value});
+        let selected=this.state.newCommentInterest;
+        if(selected!==event.target.value)
+        {   selected =[];
+            selected.push(event.target.value);
+        }
+
+        this.setState({newCommentInterest:selected});
     };
     changeInputHandler=(event)=>{
         const target=event.target;
@@ -34,12 +40,16 @@ class CommentList extends React.Component{
             [name]:value,
         })
 
-    }
+    };
     submitHandler=(event)=>{
         alert('Your comment submitted '+
             this.state.newCommentSelect +'ly \n'+
             'Title: '+ this.state.newCommentTitle+
-            '\nContent: '+this.state.newComment);
+            '\nContent: '+this.state.newComment+
+            '\nInterest: '+this.state.newCommentInterest
+
+
+        );
         event.preventDefault();
     };
     render(){
@@ -77,7 +87,7 @@ class CommentList extends React.Component{
 
                     </select>
                 </label>
-<input type= "file"/>
+{/*<input type= "file"/>*/}
 
                 <input type="submit" value="Submit" />
                 <input type="submit" value="Cancel" />
