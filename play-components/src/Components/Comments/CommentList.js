@@ -7,6 +7,8 @@ class CommentList extends React.Component{
         newComment:'',
         newCommentSelect:'public',
         newCommentInterest:[],
+        isGoing:true,
+        numberOfGuests:1,
 
     };
     clickToggleHandler=()=>{
@@ -24,7 +26,15 @@ class CommentList extends React.Component{
     multipleSelectHandler=(event)=>{
         this.setState({newCommentInterest:event.target.value});
     };
+    changeInputHandler=(event)=>{
+        const target=event.target;
+        const value=target.type==='checkbox'?target.checked:target.value;
+        const name=target.name;
+        this.setState({
+            [name]:value,
+        })
 
+    }
     submitHandler=(event)=>{
         alert('Your comment submitted '+
             this.state.newCommentSelect +'ly \n'+
@@ -72,6 +82,27 @@ class CommentList extends React.Component{
                 <input type="submit" value="Cancel" />
 
             </form>
+
+
+            <form onSubmit={this.submitHandler}>
+                <label>
+                    <input
+                        name="isGoing"
+                        type="checkbox"
+                        checked={this.state.isGoing}
+                        onChange={this.changeInputHandler}
+                        />
+                </label><br/>
+                <label>
+                    <input
+                        name="numberOfGuests"
+                        type="number"
+                        value={this.state.numberOfGuests}
+                        onChange={this.changeInputHandler}
+                    />
+                </label>
+            </form>
+
 
             </div>
 
