@@ -8,5 +8,6 @@ import Clock from './Components/Clock/Clock';
         <Clock />,
         document.getElementById('time-stamp')
     );
-ReactDOM.render(<App />, document.getElementById('root'));
+ ReactDOM.render(<App />, document.getElementById('root'));
+
 serviceWorker.unregister();

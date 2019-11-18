@@ -58,6 +58,7 @@ class CommentList extends React.Component{
                     comment here:
                     <textarea value={this.state.newComment} onChange={this.changeCommentHandler}/>
                 </label>
+                <br/><br/><br/>
                 <label>
                    how do you like your comment?
                     <select value={this.state.newCommentSelect} onChange={this.changSelectHandler}>
@@ -65,7 +66,7 @@ class CommentList extends React.Component{
                         <option value= "private"> Private </option>
                     </select>
                 </label>
-
+                <br/><br/><br/>
                 <label>
                     What are you interested in?
                     <select multiple={true} value={this.state.newCommentInterest} onChange={this.multipleSelectHandler}>
@@ -82,7 +83,7 @@ class CommentList extends React.Component{
                 <input type="submit" value="Cancel" />
 
             </form>
-
+            <br/><br/><br/><hr/>
 
             <form onSubmit={this.submitHandler}>
                 <label>
@@ -102,7 +103,7 @@ class CommentList extends React.Component{
                     />
                 </label>
             </form>
-
+            <br/><br/><br/><hr/>
 
             </div>
 
