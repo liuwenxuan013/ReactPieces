@@ -37,10 +37,14 @@ class Calculator extends React.Component{
         return <div>
             <UserInput scale='c'
                        temperature={celsius}
-                       onInputChange={this.celsiusChangeHandler}/>
+                       // onInputChange={(event)=>this.celsiusChangeHandler(event.target.value)}
+                       onInputChange={this.celsiusChangeHandler}
+            />
             <UserInput scale='f'
                        temperature={fahrenheit}
-                       onInputChange={this.fahrenheitChangeHandler}/>
+                       onInputChange={this.fahrenheitChangeHandler}
+                       //onInputChange={(event)=>this.fahrenheitChangeHandler(event.target.value)}
+            />
             <ResultText  celsius={parseFloat(celsius)} />
 
             </div>

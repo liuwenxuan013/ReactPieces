@@ -19,7 +19,9 @@ class UserInput extends React.Component{
                     Enter temperature in {scaleNames[scale]}:</legend>
                 <input
                     value={temperature}
+                    // onChange={this.props.onInputChange}
                     onChange={this.changeHandler}
+
                 />
             </fieldest>
         </div>

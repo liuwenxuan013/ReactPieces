@@ -20,7 +20,7 @@ function Users (){
 
             author: {
                 name: 'Spider man',
-                avatarUrl: 'http://pluspng.com/img-png/superman-hd-png--1491.png'}
+                avatarUrl: 'https://vignette.wikia.nocookie.net/marveldatabase/images/9/92/Peter_Parker_%28Earth-30847%29_from_Marvel_vs._Capcom_Infinite_0001.png/revision/latest?cb=20170922195944'}
         }];
 
 
