@@ -6,7 +6,7 @@ class CommentList extends React.Component{
         newCommentTitle:'',
         newComment:'',
         newCommentSelect:'public',
-
+        newCommentInterest:[],
 
     };
     clickToggleHandler=()=>{
@@ -20,6 +20,9 @@ class CommentList extends React.Component{
     };
     changSelectHandler=(event)=>{
         this.setState({newCommentSelect:event.target.value});
+    };
+    multipleSelectHandler=(event)=>{
+        this.setState({newCommentInterest:event.target.value});
     };
 
     submitHandler=(event)=>{
@@ -39,20 +42,31 @@ class CommentList extends React.Component{
             <form onSubmit={this.submitHandler}>
                 <label>
                     Give your comment a title:
-                    <input type='text' value={this.state.value} onChange={this.changeTitleHandler}/>
+                    <input type='text' value={this.state.newCommentTitle} onChange={this.changeTitleHandler}/>
                 </label>
                 <label>
                     comment here:
-                    <textarea value={this.state.value} onChange={this.changeCommentHandler}/>
+                    <textarea value={this.state.newComment} onChange={this.changeCommentHandler}/>
                 </label>
                 <label>
                    how do you like your comment?
-                    <select value={this.state.value} onChange={this.changSelectHandler}>
+                    <select value={this.state.newCommentSelect} onChange={this.changSelectHandler}>
                         <option value= "public"> Public </option>
                         <option value= "private"> Private </option>
                     </select>
                 </label>
 
+                <label>
+                    What are you interested in?
+                    <select multiple={true} value={this.state.newCommentInterest} onChange={this.multipleSelectHandler}>
+                        <option value= "movie"> Movie </option>
+                        <option value= "music"> Music </option>
+                        <option value= "travel"> Travel </option>
+                        <option value= "photography"> Photography </option>
+
+                    </select>
+                </label>
+<input type= "file"/>
 
                 <input type="submit" value="Submit" />
                 <input type="submit" value="Cancel" />
