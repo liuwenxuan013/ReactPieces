@@ -9,7 +9,7 @@ function Users (){
         {
             id:'01',
             date:new Date(),
-            text:'some text goes here...',
+
             author: {
                 name: 'Superman',
                 avatarUrl: 'http://pluspng.com/img-png/superman-hd-png--1491.png'}
@@ -17,9 +17,9 @@ function Users (){
         {
             id:'02',
             date:new Date(),
-            text:'some text goes here...',
+
             author: {
-                name: 'Superman',
+                name: 'Spider man',
                 avatarUrl: 'http://pluspng.com/img-png/superman-hd-png--1491.png'}
         }];
 
@@ -30,10 +30,9 @@ function Users (){
                     src={user.author.avatarUrl}
                     name={user.author.name}
                 />
-                <Comment
-                    date={user.date}
-                    text={user.text}
-                />
+                {user.author.name}
+
+
 
             </div>
 

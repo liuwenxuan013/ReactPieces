@@ -1,11 +1,12 @@
 import React from 'react';
+import './Notification.css'
 import NoticeList from "./NoticeList";
 
 
 class Notification extends React.Component{
 
 state={showNotice:true};
-   clickToggleHandler=()=>{
+clickToggleHandler=()=>{
         this.setState(state=>({showNotice:!state.showNotice}));
     };
 
@@ -14,7 +15,7 @@ state={showNotice:true};
     render(){
         const showNotice=this.state.showNotice;
         return(
-            <div>
+            <div className ="notice" >
                 {showNotice?
                     <div>
                         <NoticeList/>
