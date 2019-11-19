@@ -9,6 +9,8 @@ import FancyBorder from "../FancyBorder/FancyBorder";
 import SplitPane from "../SplitPane/SplitPane";
 import FilterableTable from "../FilterableTable/FilterableTable";
 import Data from '../Datas/Data';
+import MoviesFilter from "../FilterableTable/MoviesFilter";
+import ProductsFilter from '../FilterableTable/ProductsFilter';
 // const ITEMS=[
 //     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
 //     {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
@@ -23,9 +25,9 @@ function SignUpGreeting(){
                     title="Welcome Back!"
                     message="Good Day!"
                 >
-                    <FilterableTable items={Data.ITEMS} >
+                    <ProductsFilter/>
 
-                    </FilterableTable>
+                    <MoviesFilter/>
                     {/*<FilterableTable items={Data.MOVIES} />*/}
 
                     {/*<Mailbox />      <br/><br/><br/><hr/>*/}

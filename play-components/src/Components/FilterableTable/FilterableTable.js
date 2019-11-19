@@ -33,11 +33,14 @@ class ItemTable extends React.Component{
     render(){
         const filterText=this.props.filterText;
         const isMarkedOnly=this.props.isMarkedOnly;
+        const extra=this.props.extra;
+       const extraTitle = extra==='products'? 'Price':'Rate';
+
         const rows=[];
         let lastCategory=null;
         this.props.items.forEach((item)=>{
             if(item.name.indexOf(filterText)===-1) return;
-            if(isMarkedOnly&&!item.stocked) return;
+            if(isMarkedOnly&&!item.marked) return;
             if(item.category!==lastCategory){
                 rows.push(
                     <ItemCategoryRow
@@ -50,6 +53,7 @@ class ItemTable extends React.Component{
                 <ItemRow
                     item={item}
                     key={item.name}
+                    extra={extra}
                 />
             );
             lastCategory=item.category;
@@ -59,7 +63,7 @@ class ItemTable extends React.Component{
                 <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Price</th>
+                    <th>{extraTitle}</th>
                 </tr>
 
                 </thead>
@@ -87,14 +91,20 @@ class ItemCategoryRow extends React.Component{
 }
 
 class ItemRow extends React.Component{
+
     render(){
         const item=this.props.item;
-        const name=item.stocked? <span style={{color:'green'}}> {item.name} </span> : item.name;
+        const extra = this.props.extra;
+        const extraRow=extra==='products'? item.price :  item.rate;
+        const name=item.marked? <span style={{color:'green'}}> {item.name} </span> : item.name;
         return(
             <div>
                 <tr>
                     <td>{name}</td>
-                    <td>{item.price}</td>
+                    <td>{extraRow}</td>
+
+
+
                 </tr>
             </div>
         );
@@ -105,14 +115,21 @@ class FilterableTable extends React.Component{
     state={
         filterText:'',
         isMarkedOnly:false,
+        extra: '',
     };
+
+
+
     filterTextChgHandler=(filterText)=>{
         this.setState({filterText:filterText});
     };
     markedChgHandler=(isMarkedOnly)=>{
         this.setState({ isMarkedOnly:isMarkedOnly})
     };
+
     render(){
+       const extra=this.props.children;
+
         return(
             <div>
                 <SearchBar
@@ -125,8 +142,12 @@ class FilterableTable extends React.Component{
                     items={this.props.items}
                     filterText={this.state.filterText}
                     isMarkedOnly={this.state.isMarkedOnly}
+                    extra={extra}
+                >
 
-                />
+
+                </ItemTable>
+                {extra}
             </div>
         );
     }
