@@ -23,7 +23,11 @@ function SignUpGreeting(){
                     title="Welcome Back!"
                     message="Good Day!"
                 >
-                    <FilterableTable items={Data.ITEMS} />
+                    <FilterableTable items={Data.ITEMS} >
+
+                    </FilterableTable>
+                    {/*<FilterableTable items={Data.MOVIES} />*/}
+
                     {/*<Mailbox />      <br/><br/><br/><hr/>*/}
                     {/*<Notification/>   <br/><br/><br/><hr/>*/}
                     {/*<CommentList />    <br/><br/><br/><hr/>*/}

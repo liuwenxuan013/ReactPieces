@@ -57,11 +57,8 @@ class ItemTable extends React.Component{
         return(
             <table>
                 <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Price</th>
-                </tr>
-
+                <tr>Name</tr>
+                <tr>Price</tr>
                 </thead>
                 <tbody>{rows}</tbody>
             </table>
