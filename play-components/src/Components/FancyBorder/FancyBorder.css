@@ -1,0 +1,16 @@
+.FancyBorder{
+    padding:10px 10px;
+    border: 10px solid;
+}
+.FancyBorder-lightblue{
+    border-color: lightblue;
+
+}
+.Dialog-title{
+    color: darkolivegreen;
+
+}
+.Dialog-message{
+    color:teal;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
