@@ -1,5 +1,6 @@
 import React from 'react';
-import Greeting from '../Greeting/Greeting';
+import SignUpGreeting from '../Greeting/SignUpGreeting';
+import GuestGreeting from "../Greeting/GuestGreeting";
 function LoginButton(props){
     return(
         <button onClick={props.onClick}> Login </button>
@@ -11,7 +12,7 @@ function LogoutButton(props){
             Logout
         </button>);
     }
-   class  LoginControl extends React.Component{
+    class  LoginControl extends React.Component{
 
         state={isLoggedIn:false};
 
@@ -27,10 +28,11 @@ function LogoutButton(props){
         const isLoggedIn = this.state.isLoggedIn;
         let button = isLoggedIn?  <LogoutButton onClick={this.clickLogoutHandler} />:
         <LoginButton onClick={this.clickLoginHandler} />;
+        let greeting=isLoggedIn?  <SignUpGreeting />: <GuestGreeting />;
 
         return(
             <div>
-                <Greeting isLoggedIn={isLoggedIn}/>
+                {greeting}
                 {button}
             </div>
         );
