@@ -14,6 +14,14 @@ const Data= {
         {category: 'Adventure', rate: '7.5', marked: true, name: 'Harry Potter',year:2019},
         {category: 'Superheros', rate: '8.5',marked: false, name: 'Avengers:Endgame',year:2019},
         {category: 'Horror', rate: '7.7', marked: false, name: 'Doctor Sleep',year:2019}],
+    MUSIC: [
+        {category: 'Pop', rate: '7.5', marked: true, name: 'Bad Blood',year:2019,author:'Taylor'},
+        {category: 'Pop', rate: '7.5', marked: true, name: 'The Archer',year:2019,author:'Taylor'},
+        {category: 'Pop', rate: '9.3', marked: false, name: 'Back to December',year:2013,author:'Taylor'},
+        {category: 'Classical', rate: '7.5', marked: true, name: 'Kiss the Rain',year:2019,author:'Yiruma'},
+        {category: 'Classical', rate: '8.5',marked: false, name: 'River Follows In You',year:2019,author:'Yiruma'},
+        {category: 'Classical', rate: '7.7', marked: false, name: 'As You Wish',year:2019,author:'Yiruma'},
+        ],
 };
 
 

@@ -64,6 +64,8 @@ class ItemTable extends React.Component{
                 <tr>
                     <th>Name</th>
                     <th>{extraTitle}</th>
+                    <th colSpan="2" >Details</th>
+
                 </tr>
 
                 </thead>
@@ -102,6 +104,10 @@ class ItemRow extends React.Component{
                 <tr>
                     <td>{name}</td>
                     <td>{extraRow}</td>
+                    <td>{item.year}</td>
+                    <td>{item.author}</td>
+
+
 
 
 

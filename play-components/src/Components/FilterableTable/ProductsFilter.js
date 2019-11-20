@@ -8,7 +8,7 @@ function ProductsFilter(){
             <FilterableTable
                 items={Data.ITEMS}
             >
-                {'products'}
+               {'products'}
 
 
             </FilterableTable>

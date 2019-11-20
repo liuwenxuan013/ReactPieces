@@ -10,6 +10,7 @@ import SplitPane from "../SplitPane/SplitPane";
 import FilterableTable from "../FilterableTable/FilterableTable";
 import Data from '../Datas/Data';
 import MoviesFilter from "../FilterableTable/MoviesFilter";
+import MusicFilter from  "../FilterableTable/MusicFilter";
 import ProductsFilter from '../FilterableTable/ProductsFilter';
 // const ITEMS=[
 //     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
@@ -26,25 +27,25 @@ function SignUpGreeting(){
                     message="Good Day!"
                 >
                     <ProductsFilter/>
-
                     <MoviesFilter/>
-                    {/*<FilterableTable items={Data.MOVIES} />*/}
+                    <MusicFilter/>
+                    <FilterableTable items={Data.MOVIES} />
 
-                    {/*<Mailbox />      <br/><br/><br/><hr/>*/}
-                    {/*<Notification/>   <br/><br/><br/><hr/>*/}
-                    {/*<CommentList />    <br/><br/><br/><hr/>*/}
-                    {/*<Terms />   <br/><br/><br/><hr/>*/}
-                    {/*<Calculator /> <br/><br/><br/><hr/>*/}
-                    {/*<FancyBorder color="lightblue">*/}
-                    {/*    <h3 className="Dialog-title">Welcome</h3>*/}
-                    {/*    <p className="Dialog-message">thank you for visiting my website </p>*/}
-                    {/*</FancyBorder>*/}
-                    {/*<br/><br/><br/><hr/>*/}
+                    <Mailbox />      <br/><br/><br/><hr/>
+                    <Notification/>   <br/><br/><br/><hr/>
+                    <CommentList />    <br/><br/><br/><hr/>
+                    <Terms />   <br/><br/><br/><hr/>
+                    <Calculator /> <br/><br/><br/><hr/>
+                    <FancyBorder color="lightblue">
+                        <h3 className="Dialog-title">Welcome</h3>
+                        <p className="Dialog-message">thank you for visiting my website </p>
+                    </FancyBorder>
+                    <br/><br/><br/><hr/>
 
-                    {/*< SplitPane*/}
-                    {/*    left={<Terms/>}*/}
-                    {/*    right={<Calculator/>}*/}
-                    {/*    />*/}
+                    < SplitPane
+                        left={<Terms/>}
+                        right={<Calculator/>}
+                        />
                 </Greeting>
 
         </div>
