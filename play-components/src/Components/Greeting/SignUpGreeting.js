@@ -12,6 +12,7 @@ import Data from '../Datas/Data';
 import MoviesFilter from "../FilterableTable/MoviesFilter";
 import MusicFilter from  "../FilterableTable/MusicFilter";
 import ProductsFilter from '../FilterableTable/ProductsFilter';
+import PosterList from "../Posters/PosterList";
 // const ITEMS=[
 //     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
 //     {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
@@ -46,6 +47,9 @@ function SignUpGreeting(){
                         left={<Terms/>}
                         right={<Calculator/>}
                         />
+
+
+                        < PosterList />
                 </Greeting>
 
         </div>

@@ -18,8 +18,6 @@ class Nav extends React.Component() {
         {
             setValue(newValue);
         };
-
-
         return (
             <Paper className={classes.root}>
                 <Tabs
