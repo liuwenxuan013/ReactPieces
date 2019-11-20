@@ -1,14 +1,16 @@
 import React from 'react';
 
-import '../../App.scss';
-import styles from '../../mystyle.module.css';
+//import '../../App.scss';
+//import styles from '../../mystyle.module.css';
 import Nav from '../Nav/Nav';
 
 const Header = (props) =>
 {
-    return (<div className={styles.headerStyle}>
+    return (<div
+    // className={styles.headerStyle}
+    >
         {props.title}{props.children}
-        <Nav />
+        {/* <Nav /> */}
 
 
     </div>);
