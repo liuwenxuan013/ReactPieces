@@ -1,9 +1,6 @@
 import React from "react";
-
 import Typography from "@material-ui/core/Typography";
 import { grey, indigo } from "@material-ui/core/colors";
-
-import CardsList from '../Cards/CardsList';
 import Nav from '../Nav/Nav';
 import CssBaseline from "@material-ui/core/CssBaseline";
 
@@ -11,7 +8,7 @@ import Container from "@material-ui/core/Container";
 
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core";
 
-export default function ContainerComponent()
+export default function MainContainer()
 {
     const theme = createMuiTheme({
         palette: {
@@ -32,7 +29,7 @@ export default function ContainerComponent()
                 <Nav />
                 <Container >
                     <Typography style={{ padding: "5px 0" }}>
-                        <CardsList />
+                        <Home />
                     </Typography>
                 </Container>
             </React.Fragment>
