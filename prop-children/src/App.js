@@ -1,30 +1,16 @@
 import React from 'react';
 import './App.css';
+import './App.scss';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
-import Nav from './Components/Nav/Nav';
-import Home from './Components/Contents/Home/Home';
-
-
-
-
-
-
+import Home from './Components/Home/Home';
 class App extends React.Component
 {
-
   render()
   {
     return (
-
-      <div>
-        <Header title={this.props.appTitle}>
-          @Wenxuan
-          </Header>
-
-
-
-        <Nav />
+      <div className="container">
+        <Header />
         <Home />
         <Footer />
 

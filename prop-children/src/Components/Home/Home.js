@@ -1,6 +1,6 @@
 import React from 'react';
 import Poster from './Posters/Poster';
-import Clock from '../Clock/Clock';
+import Card from './Card/Card';
 class Home extends React.Component
 {
 
@@ -10,7 +10,7 @@ class Home extends React.Component
                 id: '01',
 
                 posterTitle: 'Programmer World',
-                imgUrl: 'https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto/gigs/111169624/original/7afa2f60f3677c46c2f57fa555ca8f164337e240/be-your-computer-science-programer.jpg',
+                imgUrl: 'http://cdn.wonderfulengineering.com/wp-content/uploads/2014/04/code-wallpaper-8.jpg',
                 content: 'Welcome to Programming World!',
                 doesShow: true
             },
@@ -64,6 +64,8 @@ class Home extends React.Component
     render()
     {
 
+
+
         return this.state.posters.map((poster) =>
         {
 
@@ -84,7 +86,7 @@ class Home extends React.Component
                         <p> {poster.content}</p>
                     </Poster>
 
-
+                    <Card />
                 </div>
             )
         }

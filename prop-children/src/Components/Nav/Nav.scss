@@ -1,0 +1,35 @@
+$navBackGroundColor:#2A293E;
+body {margin:0;}
+
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    background-color:$navBackGroundColor;
+    top: 0;
+    width: 100%;
+    }
+
+    li {
+    float: left;
+    }
+
+    li a {
+    display: block;
+    color: #f0f0f5;
+    text-align: center;
+    padding: 20px 40px;
+    text-decoration: none;
+    }
+
+    li a:hover {
+    background-color: #34344c;
+    }
+
+    .active {
+  background-color: #3e3e5b;
+    }
+
+

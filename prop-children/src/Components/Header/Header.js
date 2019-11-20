@@ -1,32 +1,16 @@
 import React from 'react';
 
-import AppBar from '@material-ui/core/AppBar';
+import '../../App.scss';
+import styles from '../../mystyle.module.css';
+import Nav from '../Nav/Nav';
 
-
-import Clock from '../Contents/Clock/Clock';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 const Header = (props) =>
 {
-
-    return (
-        <AppBar position="static">
-            <Toolbar>
-
-
-                <Typography variant="h6" >
-                    {props.title}{props.children}
-                    <Clock />
-
-                </Typography>
-
-            </Toolbar>
-        </AppBar>
-
-    );
+    return (<div className={styles.headerStyle}>
+        {props.title}{props.children}
+        <Nav />
 
 
-
-
+    </div>);
 }
 export default Header;

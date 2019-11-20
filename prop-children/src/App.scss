@@ -1,0 +1,30 @@
+$myHeaderColor:#2A293E !global;
+$myLightColor: #f0f0f5;
+$myDarkColor:  #34344c !global;
+$myBackgroundColor:#d1d1e0 !global;
+$myFontSize:18px !global;
+$myWidth:680px;
+$max-width:500px;
+$myFont: Helvetica,sans-serif !global;
+#container{
+    max-width: $max-width;
+    width:$myWidth;
+
+}
+body{
+
+    font-family: $myFont;
+    font-size:$myFontSize;
+    color:$myDarkColor;
+    background-color:$myBackgroundColor;
+}
+
+button{
+    border:none;
+}
+
+
+       
+
+
+

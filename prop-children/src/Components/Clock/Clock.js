@@ -1,5 +1,4 @@
 import React from 'react';
-//import ReactDOM from 'react-dom';
 class Clock extends React.Component
 {
     constructor(props)
@@ -23,9 +22,25 @@ class Clock extends React.Component
     }
     render()
     {
+        const style = {
+            display: 'block',
+            color: '#f0f0f5',
+            textAlign: 'right',
+            padding: '18px 12px ',
+            backgroundColor: '#2A293E',
+            margin: 0,
+
+
+        }
+
         return (
-            <div >
-                <h1>{this.state.date.toLocaleTimeString()}</h1>
+
+            <div style={style}>
+                <h1 style={{
+                    fontFamily: 'sans-serif',
+                    fontSize: '14px',
+                }}
+                >{this.state.date.toLocaleTimeString()}</h1>
             </div>
         );
     }
