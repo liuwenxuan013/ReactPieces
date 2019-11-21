@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from '@material-ui/core/Link';
 //import useStyles from '../useStyles';
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
@@ -15,23 +15,7 @@ import ShareIcon from "@material-ui/icons/Share";
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import clsx from "clsx";
-import Card from "@material-ui/core/Card";
-import CardHeader from "@material-ui/core/CardHeader";
-import CardMedia from "@material-ui/core/CardMedia";
-import CardContent from "@material-ui/core/CardContent";
-import CardActions from "@material-ui/core/CardActions";
-import Collapse from "@material-ui/core/Collapse";
-import Avatar from "@material-ui/core/Avatar";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
-import { red } from "@material-ui/core/colors";
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import ShareIcon from "@material-ui/icons/Share";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
 
-import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import MoreVertIcon from "@material-ui/icons/MoreVert";
@@ -52,7 +36,10 @@ import { CardContext, CardInfo } from '../CardContext ';
 class Cards extends React.Component
 {
     // state = { user: this.context }
+    handleFavorite = (e) =>
+    {
 
+    }
     render()
     {
 
@@ -97,22 +84,28 @@ class Cards extends React.Component
                     <IconButton aria-label="add to favorites">
                         <FavoriteIcon />
                     </IconButton>
-                    <IconButton aria-label="share">
-                        <ShareIcon />
-                    </IconButton>
-                    <IconButton
-                        aria-label="show more"
-                    >
-                        {/* <ExpandMoreIcon /> */}
-                    </IconButton>
-                </CardActions>
-                <Collapse>
-                    <CardContent>
-                        <Typography paragraph>Method:</Typography>
 
-                    </CardContent>
-                </Collapse>
-            </Card>
+                </CardActions>
+                <ExpansionPanel>
+                    <ExpansionPanelSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
+                    >
+                        <Typography >more about {this.props.title} </Typography>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails>
+                        <Typography>
+                            <Link href={this.props.srcUrl}>
+                                {this.props.title} link
+                            </Link>
+
+                        </Typography>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
+
+
+            </Card >
         );
 
     }
