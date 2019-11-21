@@ -14,36 +14,48 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import UserContext from '../UserContext ';
+// class CardHeaderComponent extends React.Component
+// {
+//     render()
+//     {
+//         const user = this.props.user;
+//         return (
+
+
+//             <img src="/cat.jpg" style={{ position: 'absolute', left: mouse.x, top: mouse.y }} />
+//         );
+//     }
+// }
+
 class Cards extends React.Component
 {
-
+    // state = { user: this.context }
 
     render()
     {
-
 
         return (
             <Card
             // className= {classes.card}
             >
                 <UserContext.Consumer>
-                    {user =>
-                        <CardHeader
-                            avatar={
-                                <Avatar aria-label="recipe"
-                                >
-                                    {user[0].title}
+                    {user => < CardHeader
+                        avatar={
+                            <Avatar aria-label="recipe"
+                            >
+                                {this.props.title}
 
-                                </Avatar>
-                            }
-                            action={
-                                <IconButton aria-label="settings">
-                                    <MoreVertIcon />
-                                </IconButton>
-                            }
-                            title={user[0].project}
+                            </Avatar>
+                        }
+                        action={
+                            <IconButton aria-label="settings">
+                                <MoreVertIcon />
+                            </IconButton>
+                        }
+                        title={this.props.project}
 
-                        />}
+                    />}
+
                 </UserContext.Consumer>
                 <CardMedia
                     // className={classes.media}

@@ -1,11 +1,15 @@
 import React from "react";
 import Home from '../Home/Home';
-export default function MainContainer()
+class MainContainer extends React.Component
 {
+    render()
+    {
+        return (
 
-    return (
+            <Home />
 
-        <Home />
+        );
+    }
 
-    );
 }
+export default MainContainer;

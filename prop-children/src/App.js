@@ -26,10 +26,10 @@ class App extends React.Component
         title: 'L',
         project: 'Resume',
       },
-      // {
-      //   title: 'G',
-      //   project: 'GirHub',
-      // }
+      {
+        title: 'G',
+        project: 'GirHub',
+      }
     ]
   }
   // state = { user: 'L' }
