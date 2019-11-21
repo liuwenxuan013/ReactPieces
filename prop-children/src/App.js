@@ -12,28 +12,10 @@ import Container from "@material-ui/core/Container";
 import CardsList from './Components/Cards/CardsList';
 // import ToolBar from './Components/ToolBar/ToolBar';
 
-import UserContext from './Components/UserContext ';
+
 
 class App extends React.Component
 {
-  state = {
-    user: [
-      {
-        title: 'L',
-        project: 'LinkedIn',
-      },
-      {
-        title: 'L',
-        project: 'Resume',
-      },
-      {
-        title: 'G',
-        project: 'GirHub',
-      }
-    ]
-  }
-  // state = { user: 'L' }
-
   render()
   {
     //let cardHead = this.state;
@@ -46,9 +28,7 @@ class App extends React.Component
         <Nav />
         <Container >
           <Typography style={{ padding: "5px 0" }}>
-            <UserContext.Provider value={this.state.user}>
-              <MainContainer />
-            </UserContext.Provider>
+            <MainContainer />
           </Typography>
         </Container>
       </React.Fragment>
