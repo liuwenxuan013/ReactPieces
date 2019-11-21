@@ -12,12 +12,11 @@ import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
-
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-
-
+import UserContext from '../UserContext ';
 class Cards extends React.Component
 {
+
 
     render()
     {
@@ -27,22 +26,25 @@ class Cards extends React.Component
             <Card
             // className= {classes.card}
             >
-                <CardHeader
-                    avatar={
-                        <Avatar aria-label="recipe"
-                        // className={classes.avatar}
-                        >
-                            {this.props.user}
-                        </Avatar>
-                    }
-                    action={
-                        <IconButton aria-label="settings">
-                            <MoreVertIcon />
-                        </IconButton>
-                    }
-                    title="My Project"
+                <UserContext.Consumer>
+                    {user =>
+                        <CardHeader
+                            avatar={
+                                <Avatar aria-label="recipe"
+                                >
+                                    {user[0].title}
 
-                />
+                                </Avatar>
+                            }
+                            action={
+                                <IconButton aria-label="settings">
+                                    <MoreVertIcon />
+                                </IconButton>
+                            }
+                            title={user[0].project}
+
+                        />}
+                </UserContext.Consumer>
                 <CardMedia
                     // className={classes.media}
                     image="/static/images/cards/paella.jpg"
@@ -102,5 +104,5 @@ class Cards extends React.Component
 
     }
 }
-
+Cards.contextType = UserContext;
 export default Cards;
