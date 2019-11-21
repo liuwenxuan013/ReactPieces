@@ -22,10 +22,10 @@ class App extends React.Component
         title: 'L',
         project: 'LinkedIn',
       },
-      // {
-      //   title: 'L',
-      //   project: 'Resume',
-      // },
+      {
+        title: 'L',
+        project: 'Resume',
+      },
       // {
       //   title: 'G',
       //   project: 'GirHub',
