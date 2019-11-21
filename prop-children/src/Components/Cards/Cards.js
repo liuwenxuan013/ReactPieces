@@ -21,7 +21,7 @@ class Cards extends React.Component
 
     render()
     {
-        // const classes = useStyles();
+
 
         return (
             <Card
@@ -32,8 +32,8 @@ class Cards extends React.Component
                         <Avatar aria-label="recipe"
                         // className={classes.avatar}
                         >
-                            L
-          </Avatar>
+                            {this.props.user}
+                        </Avatar>
                     }
                     action={
                         <IconButton aria-label="settings">
