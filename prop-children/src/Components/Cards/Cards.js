@@ -2,6 +2,7 @@ import React from "react";
 import Link from '@material-ui/core/Link';
 //import useStyles from '../useStyles';
 import Card from "@material-ui/core/Card";
+import red from '@material-ui/core/colors/red';
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
@@ -35,13 +36,12 @@ import { CardContext, CardInfo } from '../CardContext ';
 
 class Cards extends React.Component
 {
-    // state = { user: this.context }
-    handleFavorite = (e) =>
-    {
 
-    }
+
     render()
     {
+        const style = { color: '#c62828' }
+
 
         return (
             <Card
@@ -82,7 +82,10 @@ class Cards extends React.Component
                 </CardContent>
                 <CardActions disableSpacing>
                     <IconButton aria-label="add to favorites">
-                        <FavoriteIcon />
+
+                        <FavoriteIcon style={style}
+
+                        />
                     </IconButton>
 
                 </CardActions>
