@@ -40,7 +40,7 @@ class Cards extends React.Component
 
     render()
     {
-        const style = { color: '#c62828' }
+        const style = { color: '#c62828' };
 
 
         return (
@@ -84,8 +84,10 @@ class Cards extends React.Component
                     <IconButton aria-label="add to favorites">
 
                         <FavoriteIcon style={style}
+                        // style={this.target.style === { color: '#c62828' } ? { color: '#000000' } : { color: '#c62828' }}
 
                         />
+
                     </IconButton>
 
                 </CardActions>
@@ -95,7 +97,7 @@ class Cards extends React.Component
                         aria-controls="panel1a-content"
                         id="panel1a-header"
                     >
-                        <Typography >more about {this.props.title} </Typography>
+                        <Typography >Checkout the link below for more details</Typography>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
                         <Typography>
