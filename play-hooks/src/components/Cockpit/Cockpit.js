@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import classes from './Cockpit.module.css';
 
 
 function Cockpit(props)
 {
+    const btnToggleRef = useRef();
     // useEffect(() =>
     // {
     //     console.log('[Cockpit.js] useEffect');
@@ -25,7 +26,12 @@ function Cockpit(props)
             console.log('[Cockpit.js] cleaning work in [] useEffect');
         }
     }, []);
+    useEffect(() =>
+    {
+        btnToggleRef.current.click();
+    }, []
 
+    );
     // useEffect(() =>
     // {
     //     console.log('[Cockpit.js] 3nd useEffect');
@@ -64,6 +70,7 @@ function Cockpit(props)
             <button
                 className={btnClass}
                 onClick={props.clickToggle}
+                ref={btnToggleRef}
 
             > Toggle Persons</button>
         </div >
