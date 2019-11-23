@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import Person from './Person/Person';
 
 
-class Persons extends React.Component 
+class Persons extends PureComponent 
 {
     static getDerivedStateFormProps(props, state)
     {
@@ -14,13 +14,13 @@ class Persons extends React.Component
         console.log('[Persons.js] componentDidMount');
     }
 
-    shouldComponentUpdate(nextProps, nextState)
-    {
-        console.log('[Persons.js] shouldComponentUpdate', [nextProps, nextState]);
-        return nextProps.persons !== this.props.persons
-            || nextProps.changeName !== this.props.changeName
-            || nextProps.clickDelete !== this.props.clickDelete;
-    }
+    // shouldComponentUpdate(nextProps, nextState)
+    // {
+    //     console.log('[Persons.js] shouldComponentUpdate', [nextProps, nextState]);
+    //     return nextProps.persons !== this.props.persons
+    //         || nextProps.changeName !== this.props.changeName
+    //         || nextProps.clickDelete !== this.props.clickDelete;
+    // }
     getSnapshotBeforeUpdate(prevProps, prevState)
     {
         console.log('[Persons.js] getSnapshotBeforeUpdate', [prevProps, prevState]);
