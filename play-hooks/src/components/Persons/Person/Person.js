@@ -5,6 +5,12 @@ import withClass from '../../../hoc/withClass';
 import Aux from '../../../hoc/Aux';
 class Person extends Component
 {
+    constructor(props)
+    {
+        super(props);
+        this.globalInputEleRef = React.createRef();
+    }
+
     static getDerivedStateFormProps(props, state)
     {
         console.log('[Person.js] getDerivedStateFormProps', [props, state]);
@@ -13,6 +19,8 @@ class Person extends Component
     componentDidMount()
     {
         console.log('[Person.js] componentDidMount');
+        this.globalInputEleRef.current.focus();
+        //this.globalInputEleRef.focus();
         // document.querySelector('input').focus();//only can focus on the first input element,how to focus on the last one?
     }
 
@@ -46,7 +54,9 @@ class Person extends Component
                      </p>
                 <p> {this.props.children}</p>
                 <input
-                    ref={(x) => { x.focus() }}
+                    // ref={(x) => { x.focus() }} not recommend
+                    //ref={(inputElement) => { this.globalInputEleRef = inputElement }}
+                    ref={this.globalInputEleRef}//using constructor
                     style={{ color: "blue" }}
                     type='text'
                     onChange={this.props.changed}
