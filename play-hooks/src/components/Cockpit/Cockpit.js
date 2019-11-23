@@ -18,13 +18,13 @@ function Cockpit(props)
     useEffect(() =>
     {
         console.log('[Cockpit.js] 2nd useEffect');
-        setTimeout(() => { alert('empty array as condition of firing useEffect!') }, 1000);
+        const timer = setTimeout(() => { alert('empty array as condition of firing useEffect!') }, 1000);
         return () =>
         {
-            // clearTimeout(timer);
+            clearTimeout(timer);
             console.log('[Cockpit.js] cleaning work in [] useEffect');
         }
-    });
+    }, []);
 
     // useEffect(() =>
     // {
