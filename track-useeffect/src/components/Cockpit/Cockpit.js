@@ -18,9 +18,9 @@ function Cockpit(props)
         <div>
             <p> {props.title} </p>
             <button
-                doesshow={props.doesshow}
+                show={props.show}
                 onClick={props.clickToggle}
-            >Toggle to {props.doesShow ? 'Hide' : 'Show'}Persons </button>
+            >Toggle to {props.show ? 'Hide' : 'Show'}Persons </button>
         </div>
     );
 }

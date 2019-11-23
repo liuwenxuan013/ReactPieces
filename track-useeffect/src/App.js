@@ -14,14 +14,14 @@ class App extends React.Component
       { id: '03', name: 'three', age: '30' },
 
     ],
-    doesshow: true,
+    doesShow: false,
 
   }
 
   ToggleHandler = () =>
   {
-    const doesshow = this.state.doesshow;
-    this.setState = ({ doesshow: !doesshow });
+    const show = this.state.doesShow;
+    this.setState = ({ doesShow: !show });
 
   }
   personDeleteHandler = (id) =>
@@ -51,12 +51,12 @@ class App extends React.Component
     return (
       <div className="App" >
         <Cockpit
-          doesshow={this.state.doesshow}
+          show={this.state.doesShow}
           title={this.props.title}
           clickToggle={this.ToggleHandler}
         />
 
-        {this.state.doesshow ?
+        {this.state.doesShow ?
           <Persons
             persons={this.state.persons}
             clickDelete={this.personDeleteHandler}
