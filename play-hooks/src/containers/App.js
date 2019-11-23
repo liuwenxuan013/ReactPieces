@@ -2,6 +2,8 @@ import React from 'react';
 import Persons from '../components/Persons/persons';
 import Cockpit from '../components/Cockpit/Cockpit';
 import classes from './App.module.css';
+import Aux from '../hoc/Aux';
+import withClass from '../hoc/withClass';
 
 class App extends React.Component
 {
@@ -105,7 +107,7 @@ class App extends React.Component
         />
 
     return (
-      <div className={classes.App}>
+      <Aux className={classes.App}>
 
         <button
           onClick={() =>
@@ -128,11 +130,11 @@ class App extends React.Component
             showCockpit={this.state.showCockpit}
           /> : null}
         {persons}
-      </div >
+      </Aux >
     );
     // return React.createElement('div', { className: 'App' }, React.createElement('h1', null, 'hello, Laura!'));
   };
 
 };
 
-export default App;
+export default withClass(App, classes.App);
