@@ -18,7 +18,7 @@ class App extends React.Component
     ],
     showPersons: false,
     showCockpit: true,
-
+    changeCounter: 0,
   }
 
   static getDerivedStateFormProps(props, state)
@@ -82,8 +82,14 @@ class App extends React.Component
     person.name = event.target.value;
     const newPersons = [...this.state.persons];
     newPersons[personIndex] = person;
-    this.setState({ persons: newPersons });
+    this.setState((prevState, props) =>
+    {
+      return {
+        persons: newPersons,
+        changeCounter: prevState.changeCounter + 1
+      };
 
+    });
   }
 
   render()
@@ -99,8 +105,6 @@ class App extends React.Component
         />
 
     return (
-
-
       <div className={classes.App}>
 
         <button
@@ -125,7 +129,6 @@ class App extends React.Component
           /> : null}
         {persons}
       </div >
-
     );
     // return React.createElement('div', { className: 'App' }, React.createElement('h1', null, 'hello, Laura!'));
   };
