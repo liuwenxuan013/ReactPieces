@@ -4,6 +4,7 @@ import Cockpit from '../components/Cockpit/Cockpit';
 import classes from './App.module.css';
 import Aux from '../hoc/Aux';
 import withClass from '../hoc/withClass';
+import AuthContext from '../context/auth-context';
 
 class App extends React.Component
 {
@@ -21,6 +22,7 @@ class App extends React.Component
     showPersons: false,
     showCockpit: true,
     changeCounter: 0,
+    authenticated: false,
   }
 
   static getDerivedStateFormProps(props, state)
@@ -93,7 +95,11 @@ class App extends React.Component
 
     });
   }
-
+  loginHandler = () =>
+  {
+    const isAuth = this.state.authenticated;
+    this.setState({ authenticated: !isAuth });
+  }
   render()
   {
     console.log('[App.js] rendering...');
@@ -107,8 +113,7 @@ class App extends React.Component
         />
 
     return (
-      <Aux className={classes.App}>
-
+      <Aux >
         <button
           onClick={() =>
           {
@@ -120,19 +125,26 @@ class App extends React.Component
           onClick={this.addClickHandler}
         > +
         </button>
-
-        {this.state.showCockpit ?
-          <Cockpit
-            title={this.props.appTitle}
-            showPersons={this.state.showPersons}
-            personsLength={this.state.persons.length}
-            clickToggle={this.togglePersonHandler}
-            showCockpit={this.state.showCockpit}
-          /> : null}
-        {persons}
-      </Aux >
+        <AuthContext.Provider
+          value={{
+            authenticated: this.state.authenticated,
+            login: this.loginHandler
+          }}
+        >
+          {this.state.showCockpit ?
+            <Cockpit
+              title={this.props.appTitle}
+              showPersons={this.state.showPersons}
+              personsLength={this.state.persons.length}
+              clickToggle={this.togglePersonHandler}
+              showCockpit={this.state.showCockpit}
+              login={this.loginHandler}
+            /> : null}
+          {persons}
+        </AuthContext.Provider>
+      </Aux>
     );
-    // return React.createElement('div', { className: 'App' }, React.createElement('h1', null, 'hello, Laura!'));
+
   };
 
 };
