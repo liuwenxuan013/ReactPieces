@@ -1,0 +1,16 @@
+.Main{
+  
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:center;
+    width:100%;
+    margin:15px auto;
+    
+    
+   
+}
+
+.Main p{
+     color:rgb(200, 200, 220);
+     
+}

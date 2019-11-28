@@ -1,0 +1,58 @@
+
+
+.About {
+  margin-right: 30%;
+
+}
+
+.About section {
+
+  margin-left:30%;
+  width:80%;
+  padding:1px 16px;
+  height:auto;
+   
+}
+
+
+.About ul {
+  list-style-type: none;
+  margin: 20% 5%;
+  padding: 0;
+  width: 10%;
+  position: fixed;
+  
+}
+
+.About li a {
+  display: block;
+  color: #3366cc;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.About li a.active {
+
+  color: white;
+}
+
+.About li a:hover:not(.active) {
+
+  color: #99b3e6;
+}
+.About h2,h3,h4,h5 {
+
+  color:#2d5bb9;
+}
+.About p {
+
+  color:gray;
+}
+.About h1 {
+  
+    text-align: center;
+       margin:10px 0;
+     padding:10px 0;
+     color:white;
+   
+}

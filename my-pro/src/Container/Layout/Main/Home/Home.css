@@ -1,0 +1,41 @@
+.Home{
+
+height: 500px;
+width: 100%;
+margin-left:10%;
+text-align: left;
+color:#2d5bb9;
+  background-image: url('https://www.formdesigncenter.com/uploads/2013/11/grayscale-albert-einstein-monochrome-scientists-black-background-portraits-HD-Wallpapers.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+}
+
+
+
+.Home h1{
+    color:whitesmoke;
+   
+    font-size: 2em;
+
+}
+.Home h3,p{
+  
+    color:#2d5bb9;
+
+}
+.Home a{
+
+
+  text-decoration: none;
+  display: inline-block;
+  margin:0;
+
+  padding:0;
+}
+.Home a:hover{
+
+
+  background-color: #2d5bb9;
+}
