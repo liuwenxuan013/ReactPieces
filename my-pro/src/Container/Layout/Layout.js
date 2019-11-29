@@ -2,7 +2,7 @@ import React from 'react';
 import './Layout.css';
 import Nav from './Nav/Nav';
 import Footer from './Footer/Footer';
-
+import Clock from '../../Components/Clock/Clock';
 import Main from './Main/Main';
 
 class Layout extends React.Component
@@ -17,8 +17,9 @@ class Layout extends React.Component
                 <section className='Main'>
                     <Main />
                 </section>
+                <Clock className='Layout' />
                 <footer>
-                    <Footer />
+                    <Footer className='Layout' />
 
                 </footer>
 

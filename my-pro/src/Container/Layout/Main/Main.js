@@ -7,7 +7,7 @@ import Contact from './Contact/Contact';
 import { Route, Switch } from 'react-router-dom';
 import './Main.css';
 import { InfoContext, myInfo } from '../../../Components/Info/Info';
-import Clock from '../../../Components/Clock/Clock';
+
 class Main extends React.Component
 {
 
@@ -26,7 +26,7 @@ class Main extends React.Component
                         <Route path="/contact" component={Contact} />
                     </Switch>
                 </InfoContext.Provider>
-                <Clock />
+
 
             </div >
 

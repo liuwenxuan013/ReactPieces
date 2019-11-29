@@ -74,6 +74,44 @@ export const myInfo = {
     { title: 'Extensive experience with strong organizational skills and problem-solving.' }
 
     ],
+    awards: [{ title: 'President Honour (Seneca College)' },
+    { title: 'National' }],
+    arts: [{
+        desc: 'Hands',
+        imgUrl: '/images/arts/hands.jpg',
+        time: '2019'
+
+    },
+    {
+        desc: 'Tree',
+        imgUrl: '../../src/images/arts/tree.jpg',
+        time: '2019',
+
+    },
+    {
+        desc: 'Portrait 001',
+        imgUrl: '/images/arts/portrait.jpg',
+        time: '2019',
+
+    },
+    {
+        desc: 'Portrait 002',
+        imgUrl: '/images/arts/portrait2.jpg',
+        time: '2019',
+
+    },
+    {
+        desc: 'nature 002',
+        imgUrl: '/src/images/arts/nature2.jpg',
+        time: '2019',
+
+    },
+    {
+        desc: 'nature 001',
+        imgUrl: '/images/arts/nature1.jpg',
+        time: '2019',
+
+    },]
 
 
 

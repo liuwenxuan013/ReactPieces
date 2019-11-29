@@ -1,7 +1,7 @@
 import React from 'react';
 import UserInput from './UserInput';
 import ResultText from "./ResultText";
-
+import './Temperature.css';
 function toCelsius(fahrenheit)
 {
     return (fahrenheit - 32) * 5 / 9;
@@ -54,7 +54,7 @@ class Temperature extends React.Component
 
         return <div className="Temperature">
 
-            <button style={{ margin: '3% 47%' }} onClick={this.clearHandler}>Reset</button>
+
 
             <UserInput scale='c'
                 temperature={celsius}
@@ -69,10 +69,10 @@ class Temperature extends React.Component
             //onInputChange={(event)=>this.fahrenheitChangeHandler(event.target.value)}
             />
 
-
+            <button onClick={this.clearHandler}>Reset</button>
             <ResultText celsius={parseFloat(celsius)} />
 
-        </div >
+        </div>
 
 
     }

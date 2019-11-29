@@ -1,6 +1,6 @@
 .Arts{
 
-height: 500px;
+
 width: 100%;
 margin-left:10%;
 text-align: left;
@@ -16,14 +16,20 @@ color:#2d5bb9;
 
 .Arts h1{
     color:whitesmoke;
-   
-    font-size: 2em;
+    margin-right:75% ;
+
+     margin-left:0 ;
+ 
+    font-size: 1.5em;
+    font-family: "Times New Roman", Times, serif
 
 }
-.Arts h3,p{
+.Arts p{
   
-    color:#2d5bb9;
+   margin-left:15% ;
+   font-size: 1.2em;
 
+   font-family: "Times New Roman", Times, serif
 }
 .Arts a{
 
@@ -38,4 +44,52 @@ color:#2d5bb9;
 
 
   background-color: #2d5bb9;
+}
+
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
