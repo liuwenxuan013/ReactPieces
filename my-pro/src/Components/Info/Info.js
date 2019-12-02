@@ -76,42 +76,53 @@ export const myInfo = {
     ],
     awards: [{ title: 'President Honour (Seneca College)' },
     { title: 'National' }],
+
     arts: [{
         desc: 'Hands',
-        imgUrl: '/images/arts/hands.jpg',
+        imgUrl: "/images/arts/hands.jpg",
         time: '2019'
 
     },
     {
         desc: 'Tree',
-        imgUrl: '../../src/images/arts/tree.jpg',
+        imgUrl: '/images/arts/tree.jpg',
         time: '2019',
 
     },
+
     {
         desc: 'Portrait 001',
-        imgUrl: '/images/arts/portrait.jpg',
+        imgUrl: '/images/arts/portrait1.jpg',
         time: '2019',
 
     },
+    // {
+    //     desc: 'Zhong Kui',
+    //     imgUrl: '/images/arts/zhongkui.jpg',
+    //     time: '2015',
+
+    // },
+
     {
-        desc: 'Portrait 002',
-        imgUrl: '/images/arts/portrait2.jpg',
-        time: '2019',
+        desc: 'Nature 002',
+        imgUrl: '/images/arts/nature2.jpg',
+        time: '2017',
 
     },
     {
-        desc: 'nature 002',
-        imgUrl: '/src/images/arts/nature2.jpg',
-        time: '2019',
-
-    },
-    {
-        desc: 'nature 001',
+        desc: 'Nature 001',
         imgUrl: '/images/arts/nature1.jpg',
+        time: '2017',
+
+    },
+    {
+        desc: 'Vision',
+        imgUrl: '/images/arts/vision.jpg',
         time: '2019',
 
-    },]
+    },
+
+    ]
 
 
 

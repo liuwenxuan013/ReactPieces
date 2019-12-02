@@ -11,7 +11,7 @@ class Arts extends React.Component
             <div className="Arts">
                 <h1><i>"    The most beautiful thing we can experience is the mysterious. It is the source of all true art and science.    "</i></h1>
                 <p> <i>-  Albert Einstein</i></p>
-                <h2>Responsive Image Gallery</h2>
+                <p>Time plays in my favor...</p>
 
                 <InfoContext.Consumer>
                     {(context) =>
@@ -19,6 +19,7 @@ class Arts extends React.Component
                         return (
                             <div>{context.info.arts.map(a =>
                             {
+
                                 return <div key={a.imgUrl}>
                                     <div className="responsive">
                                         <div className="gallery">
@@ -27,8 +28,8 @@ class Arts extends React.Component
                                                 href={a.imgUrl}>
                                                 <img src={a.imgUrl}
                                                     alt={a.desc}
-                                                    width="600"
-                                                    height="400" />
+                                                    width="200"
+                                                    height="180" />
 
                                             </a>
                                             <div className="desc">
