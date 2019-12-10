@@ -17,16 +17,16 @@ class UserInput extends React.Component
         let speed = this.props.speed;
         let scale = this.props.scale;
         return <div>
-            <fieldest>
-                <legend style={{ margin: '10px', color: 'grey' }}>
-                    Enter speed in {scaleNames[scale]}:</legend>
-                <input autoFocus
-                    value={speed}
-                    // onChange={this.props.onInputChange}
-                    onChange={this.changeHandler}
 
-                />
-            </fieldest>
+            <legend style={{ margin: '10px', color: 'grey' }}>
+                Enter speed in {scaleNames[scale]}:</legend>
+            <input autoFocus
+                value={speed}
+                // onChange={this.props.onInputChange}
+                onChange={this.changeHandler}
+
+            />
+
         </div>
     }
 }

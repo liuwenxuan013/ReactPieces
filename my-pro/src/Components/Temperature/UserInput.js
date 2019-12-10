@@ -21,17 +21,17 @@ class UserInput extends React.Component
         let temperature = this.props.temperature;
         let scale = this.props.scale;
         return <div >
-            <fieldest>
-                <legend style={{ margin: '8px', color: 'grey' }}>
-                    Enter temperature in {scaleNames[scale]}:</legend>
-                <input autoFocus
-                    value={temperature}
-                    // onChange={this.props.onInputChange}
-                    onChange={this.changeHandler}
 
-                />
+            <legend style={{ margin: '8px', color: 'grey' }}>
+                Enter temperature in {scaleNames[scale]}:</legend>
+            <input autoFocus
+                value={temperature}
+                // onChange={this.props.onInputChange}
+                onChange={this.changeHandler}
 
-            </fieldest>
+            />
+
+
 
         </div>
     }
