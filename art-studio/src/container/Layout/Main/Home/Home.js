@@ -3,9 +3,22 @@ import MyLinks from "../../../../components/MyLinks/MyLinks";
 import OtherLinks from "../../../../components/MyLinks/OtherLinks";
 import '../../Layout.css';
 
+import Function from "./Function";
+
+
 function Home()
 {
+
+
+
+
+
     return (<div >
+
+
+<Function/>
+
+
         <div id="demo" className="carousel slide" data-ride="carousel" >
             <ul className="carousel-indicators">
                 <li data-target="#demo" data-slide-to="0" className="active"></li>
