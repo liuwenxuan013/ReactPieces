@@ -1,0 +1,84 @@
+
+* {
+    box-sizing: border-box;
+}
+.Layout {
+    text-align: center;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: larger;
+}
+
+a {
+    color:royalblue;
+
+}
+a:hover{
+    color:darkblue;
+
+}
+.menu {
+    float:left;
+    width:20%;
+    text-align:center;
+
+}
+.menu  ul{
+    background-color:whitesmoke ;
+    padding:50px 20px;
+    display: block;
+    width: 100%;
+    color:royalblue;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: large;
+
+}
+
+
+.main {
+    float:left;
+    width:80%;
+    padding:0 20px;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: larger;
+    overflow:auto;
+
+}
+.right {
+    float:left;
+    width:20%;
+    padding:15px;
+    margin-top:7px;
+    text-align:center;
+}
+.my-container{
+    overflow:auto;
+    background-color:lightgray;
+
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: larger;
+}
+.footer{
+    background-color:lightgray;
+    text-align:center;
+    padding:10px;
+    margin-bottom:0;
+    width:100%;
+    color:gray;
+    font-family: 'Darker Grotesque', sans-serif;
+
+
+}
+.header{
+    background-color:lightgray;
+    padding:15px;
+    text-align:center;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: larger;
+}
+
+@media only screen and (max-width:620px) {
+    /* For mobile phones: */
+    .menu, .main {
+        width:100%;
+    }
+}

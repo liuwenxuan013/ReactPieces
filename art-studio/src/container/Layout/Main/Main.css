@@ -1,0 +1,191 @@
+
+
+.main-left {
+    float:left;
+    width:33.3%;
+}
+.main-right {
+    float:left;
+    width:65%;
+    padding:20px;
+    margin-top:0;
+    margin-right:8px;
+
+}
+
+img{
+    width:100%;
+}
+@media only screen and (max-width:620px) {
+    /* For mobile phones: */
+    .main-left, .main-right {
+        width:100%;
+    }
+    .row-right{
+        margin:10px;
+    }
+    .main{
+        font-size: 13px;
+    }
+}
+
+.sub-main{
+
+    background-color:lightgray;
+}
+.sub-left{
+    float:left;
+    width:45%;
+
+}
+.sub-right {
+    float:right;
+    width:45%;
+}
+
+
+.row{
+    width:100%;
+}
+/* about/adventureCard*/
+.row-left {
+    float:left;
+    width:50%;
+}
+/* about/artsCard*/
+.row-right {
+    float:left;
+    width:50%;
+
+}
+
+.contact{
+    text-align:center;
+    padding-right:26%;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: larger;
+}
+
+@media only screen and (max-width:620px) {
+    /* For mobile phones: */
+    .sub-left,.sub-right{
+        width:100%;
+        height:auto;
+       margin-bottom: 20px;
+        font-size: 12px;
+    }
+    .row-left,.row-right {
+        width:100%;
+        font-size: 12px;
+    }
+    .contact{
+        padding:0;
+        margin:0;
+        text-align:center;
+    }
+}
+
+.s-card{
+    width:100%;
+    float:left;
+    overflow: auto;
+
+
+}
+
+.feature-header{
+    text-align:center;
+    width:100%;
+
+}
+
+.feature{
+    float:left;
+    width:100%;
+
+}
+
+
+.blockquote{
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: larger;
+    padding:15px 50px 0;}
+
+.converterBtn{
+   border:none;
+    color:royalblue;
+    background: whitesmoke;
+}
+.converterBtn:hover{
+    color:darkblue;
+}
+
+
+.artsCard{
+    font-family: 'Darker Grotesque', sans-serif;
+font-size:small;}
+.single-feature{
+    padding:20px;
+color:black;
+    background: whitesmoke;
+    border-top:1px solid darkgrey;
+
+}
+
+
+.s-pro{
+    padding:25px;
+    border:none;
+}
+.blockquote-footer{
+    color:gray;
+
+}
+
+.single-feature h3{
+    text-align: center;
+    padding:10px 0;
+
+}
+
+.s-tb{
+    text-align:center;
+    overflow: auto;
+    width:100%;
+}
+.s-tb #myTable{
+    font-size: 14px;
+}
+
+h2,h3,h4,h5{
+    text-align: center;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size:larger;
+}
+
+h6{
+
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size:large;
+}
+h1{
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: bold;
+}
+.center{
+    padding-top:40%;
+    text-align:center;
+}
+.card{
+    background-color:whitesmoke ;
+}
+.profile h5{
+
+    background:cornflowerblue;
+  border-radius: 30px;
+    color:whitesmoke;
+
+
+
+}
+

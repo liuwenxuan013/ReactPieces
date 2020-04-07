@@ -10,11 +10,25 @@ import ContactsIcon from '@material-ui/icons/Contacts';
 const iconStyle = {
     color: '#ffffff',
     margin: '0 8px',
-}
+};
 
 class Home extends React.Component
 {
-    render()
+    constructor(props) {
+        super(props);
+        this.state = { new_edu: '' };
+    }
+
+    mySubmitHandler=()=>{
+        alert("submiited new_edu");
+
+
+
+    };
+    myChangeHandler = (event) => {
+        this.setState({new_edu: event.target.value});};
+
+        render()
     {
         return (
             <div className="Home">
@@ -50,6 +64,11 @@ class Home extends React.Component
 
                     }
                 </InfoContext.Consumer>
+                <form  method="post" onSubmit={this.mySubmitHandler}>
+                    <input type="text"  onChange={this.myChangeHandler}/>
+                    <input type="submit" />
+                </form>
+
 
             </div >
         );
